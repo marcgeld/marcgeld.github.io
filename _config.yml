@@ -7,3 +7,5 @@ show_downloads: false
 
 plugins:
   - jekyll-gist
+  - jekyll-assets
+
