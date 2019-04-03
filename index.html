@@ -5,8 +5,8 @@ layout: default
 <link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-$.getJSON("https://bioinfobot.github.io/data/2017-05.json").done(function( data ) {
-  $("#text").html(data["text"]);
+$().ready(function() {
+   $("#text").html("Text added by jQuery code.");
 });
 </script>
 <style type="text/css" media="screen">
@@ -40,14 +40,11 @@ $.getJSON("https://bioinfobot.github.io/data/2017-05.json").done(function( data 
 
 <div class="container">
   <h2>Gist list</h2>
-  <p>xx1</p>
+  <p>xx2</p>
   {% for g in site.data.gistlist %}
     <p>U</p>
     <!--{% gist c08ee0f2726fd0e3909d %}-->
   {% endfor %}
-
-  {{ https://api.github.com/users/marcgeld/gists  | inspect }}
-
 </div>
 
 
