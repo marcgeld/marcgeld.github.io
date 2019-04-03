@@ -37,8 +37,16 @@ layout: default
   <h2>Gist list</h2>
   <p id="demo"></p> 
   <script>
-    $.getJSON('https://api.github.com/users/marcgeld/gists', function(obj) {
-      document.getElementById("demo").innerHTML = obj.url + ", " + obj.id;
+    $.getJSON('https://api.github.com/users/marcgeld/gists', function(json) {
+      json.forEach((obj) => {
+        console.log('ID: ' + obj.id);
+        console.log('created_at: ' + obj.created_at);
+        console.log('description: ' + obj.description);
+        console.log('FROMWHO: ' + obj.owner.login);
+
+        document.getElementById("demo").innerHTML = obj.url + ", " + obj.id;
+      });
+      
     }); 
   </script>
 </div>
