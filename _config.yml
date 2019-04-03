@@ -8,10 +8,3 @@ show_downloads: false
 plugins:
   - jekyll-gist
   - jekyll-assets
-
-jekyll_get:
-  data: gistlist
-  json: 'https://api.github.com/users/marggeld/gists'
-  cache: false
-
-
