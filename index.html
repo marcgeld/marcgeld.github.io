@@ -3,14 +3,6 @@ layout: default
 ---
 
 <link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>
-$().ready(function(){
-    $.getJSON( "https://bioinfobot.github.io/data/2017-05.json", function( data ) {
-    $("#text").html(data["text"]);
-  });
-});
-</script>
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -52,6 +44,4 @@ $().ready(function(){
     <a href='{{ repository.html_url }}'>{{ repository.name }}</a>
   {% endfor %}
 </div>
-
-<div id="text"></div>
 
