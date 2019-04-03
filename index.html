@@ -35,18 +35,17 @@ layout: default
 
 <div class="container">
   <h2>Gist list</h2>
-  <p id="demo"></p> 
+  <div id="parent_div"></div>
   <script>
     $.getJSON('https://api.github.com/users/marcgeld/gists', function(json) {
       json.forEach((obj) => {
         console.log('ID: ' + obj.id);
-        console.log('created_at: ' + obj.created_at);
+        console.log('filename: ' + obj.files.filename);
         console.log('description: ' + obj.description);
-        console.log('FROMWHO: ' + obj.owner.login);
+        console.log('language: ' + obj.files.language);
 
-        document.getElementById("demo").innerHTML = obj.url + ", " + obj.id;
+        $("#parent_div").append('<div id="created_div"></div>');
       });
-      
     }); 
   </script>
 </div>
