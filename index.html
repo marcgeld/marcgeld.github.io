@@ -34,7 +34,11 @@ layout: default
 
 <div class="container">
   <h2>Gist list</h2>
-  <script src="https://gist.github.com/benbalter/5555251.js"></script>
+  <p id="demo"></p> 
+  <script>
+      var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+      document.getElementById("demo").innerHTML = obj.name + ", " + obj.age; 
+  </script>
 </div>
 
 
