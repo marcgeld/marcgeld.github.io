@@ -10,21 +10,21 @@ layout: default
     text-align: center;
   }
   h1 {
-    margin: 26px 0;
+    margin: 32px;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
     font-family: 'Lobster', cursive;
   }
   h2 {
-    margin: 22px;
+    margin: 16px;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
-    font-family: 'Lobster', cursive;
+    font-family: 'Parisienne', cursive;
   }
   h3 {
-    margin: 12px;
+    margin: 16px;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
@@ -35,7 +35,10 @@ layout: default
 <div class="container">
   <h2>Gist list</h2>
   <p>The requested page could be found.</p>
-  {% gist 82dad51721df7938d185e2ad5bbfe26e %}
+
+  {% for gistno in site.github.public_gists %}
+    {{ gistno.name }}</a>
+  {% endfor %}
 </div>
 
 
