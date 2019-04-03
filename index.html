@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -13,6 +14,14 @@ layout: default
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  h2 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-family: 'Open Sans', sans-serif;
   }
 </style>
 
@@ -29,6 +38,7 @@ layout: default
 
 
 <div class="container">
+  <h2><Repositories/h2>
   {% for repository in site.github.public_repositories %}
     <a href='{{ repository.html_url }}'>{{ repository.name }}</a>
   {% endfor %}
