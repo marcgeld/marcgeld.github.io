@@ -44,16 +44,16 @@ layout: default
         console.log('description: ' + obj.description);
         console.log('language: ' + obj.files.language);
 
-        $("#parent_div").append('<div id="' 
-          + obj.id 
-          + '">'
-          + obj.description
+        var raw = 'https://gist.github.com/marcgeld/' + obj.id + '/raw/';
+        var link = 'https://gist.github.com/marcgeld/' + obj.id;
+        $("#parent_div").append('<div>'
+          + '<a href="' + link + '">' + obj.description + '</a>'
+          + '<a href="' + raw + '">raw</a>'
           +'</div>');
       });
     }); 
   </script>
 </div>
-
 
 <div class="container">
   <h3>Repositories</h3>
