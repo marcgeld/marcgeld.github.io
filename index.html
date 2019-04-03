@@ -34,7 +34,11 @@ layout: default
 
 <div class="container">
   <h2>Gist list</h2>
-  <p>xxx</p>
+  <p>xx1</p>
+  {% for g in site.data.gistlist %}
+    {{ g }}</a>
+    <!--{% gist c08ee0f2726fd0e3909d %}-->
+  {% endfor %}
 
   {{ https://api.github.com/users/marcgeld/gists  | inspect }}
 
