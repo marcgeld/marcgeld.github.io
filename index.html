@@ -26,3 +26,11 @@ layout: default
   {% gist 82dad51721df7938d185e2ad5bbfe26e %}
 
 </div>
+
+
+<div class="container">
+  {% for repository in site.github.public_repositories %}
+    <a href='{{ repository.html_url }}'>{{ repository.name }}</a>
+  {% endfor %}
+</div>
+
