@@ -5,6 +5,10 @@ layout: default
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne" rel="stylesheet">
 <style type="text/css" media="screen">
+  tab {
+    position:absolute;
+    left:50px;
+    }
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -39,15 +43,19 @@ layout: default
   <script>
     $.getJSON('https://api.github.com/users/marcgeld/gists', function(json) {
       json.forEach((obj) => {
+        /*
         console.log('ID: ' + obj.id);
         console.log('filename: ' + obj.files.filename);
         console.log('description: ' + obj.description);
         console.log('language: ' + obj.files.language);
+        */
 
         var raw = 'https://gist.github.com/marcgeld/' + obj.id + '/raw/';
         var link = 'https://gist.github.com/marcgeld/' + obj.id;
+
         $("#parent_div").append('<div>'
           + '<a href="' + link + '">' + obj.description + '</a>'
+          + '<tab>'
           + '<a href="' + raw + '">raw</a>'
           +'</div>');
       });
