@@ -37,9 +37,10 @@ layout: default
   <h2>Gist list</h2>
   <p id="demo"></p> 
   <script>
-    $.getJSON('https://api.github.com/users/marcgeld/gists', function(data) {});
+    $.getJSON('https://api.github.com/users/marcgeld/gists', function(data) {
       var obj = JSON.parse(data);
-      document.getElementById("demo").innerHTML = obj.url + ", " + obj.id; 
+      document.getElementById("demo").innerHTML = obj.url + ", " + obj.id;
+    }); 
   </script>
 </div>
 
