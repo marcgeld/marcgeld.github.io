@@ -44,7 +44,11 @@ layout: default
         console.log('description: ' + obj.description);
         console.log('language: ' + obj.files.language);
 
-        $("#parent_div").append('<div id="created_div"></div>');
+        $("#parent_div").append('<div id="' 
+          + obj.id 
+          + '">'
+          + obj.description
+          +'</div>');
       });
     }); 
   </script>
