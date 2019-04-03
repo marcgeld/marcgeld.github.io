@@ -3,37 +3,43 @@ layout: default
 ---
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne|Montserrat|Source+Code+Pro" rel="stylesheet">
 <style type="text/css" media="screen">
-  tab {
-    position:absolute;
-    left:50px;
-    }
   .container {
     margin: 10px auto;
     max-width: 600px;
     text-align: center;
   }
   h1 {
-    margin: 32px;
-    font-size: 4em;
+    margin: 24px;
+    font-size: 5em;
     line-height: 1;
     letter-spacing: -1px;
     font-family: 'Lobster', cursive;
   }
   h2 {
-    margin: 16px;
+    margin: 24px;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
     font-family: 'Parisienne', cursive;
   }
   h3 {
-    margin: 16px;
-    font-size: 4em;
+    margin: 24px;
+    font-size: 3em;
     line-height: 1;
     letter-spacing: -1px;
     font-family: 'Parisienne', cursive;
+  }
+  .link {
+    margin: 16px;
+    font-size: 8px;
+    font-family: 'Montserrat';
+  }
+  .raw {
+    margin: 16px;
+    font-size: 8px;
+    font-family: 'Source+Code+Pro';
   }
 </style>
 
@@ -54,9 +60,9 @@ layout: default
         var link = 'https://gist.github.com/marcgeld/' + obj.id;
 
         $("#parent_div").append('<div>'
-          + '<a href="' + link + '">' + obj.description + '</a>'
-          + '<tab>'
-          + '<a href="' + raw + '">raw</a>'
+          + '<a class="link" href="' + link + '">' + obj.description + '</a>'
+          + '&emsp;'
+          + '<a class="raw" href="' + raw + '">raw</a>'
           +'</div>');
       });
     }); 
