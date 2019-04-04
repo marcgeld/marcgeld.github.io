@@ -57,7 +57,7 @@ layout: default
     $.getJSON('https://api.github.com/users/marcgeld/gists', function(json) {
 
       $("#parent_div").append('<div class="gistcount">'
-      + obj.length 
+      + json.length 
       + ' public gist to date…'
       + '<div>');
 
