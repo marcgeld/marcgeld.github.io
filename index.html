@@ -46,6 +46,7 @@ layout: default
     margin: 1px;
     font-size: 12px;
     font-family: 'Source Code Pro', monospace;
+    color: #343c42;
   }
 </style>
 
@@ -62,16 +63,10 @@ layout: default
       + '<div>');
 
       json.forEach((obj) => {
-        /*
-        console.log('ID: ' + obj.id);
-        console.log('filename: ' + obj.files.filename);
-        console.log('description: ' + obj.description);
-        console.log('language: ' + obj.files.language);
-        */
-
+        
         var raw = 'https://gist.github.com/marcgeld/' + obj.id + '/raw/';
         var link = 'https://gist.github.com/marcgeld/' + obj.id;
-        var lang = Object.keys(obj.files)[0].language;
+        var lang = json[0].files[Object.keys(json[0].files)[0]].language
 
         $("#parent_div").append('<div>'
           + '<a class="link" href="' + link + '">' + obj.description + ' (' + lang + ')</a>'
