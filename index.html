@@ -6,8 +6,8 @@ layout: default
 <link href="https://fonts.googleapis.com/css?family=Lobster|Parisienne|Montserrat|Source+Code+Pro" rel="stylesheet">
 <style media="screen">
   .container {
-    margin: 10px auto;
-    max-width: 600px;
+    margin: 5px auto;
+    max-width: 700px;
     text-align: center;
   }
   h1 {
@@ -31,6 +31,12 @@ layout: default
     letter-spacing: -1px;
     font-family: 'Parisienne', cursive;
   }
+  .gistcount {
+    margin: 5px;
+    font-size: 10px;
+    line-height: 1;
+    font-family: 'Parisienne', cursive;
+  }
   .link {
     margin: 1px;
     font-size: 12px;
@@ -45,9 +51,16 @@ layout: default
 
 <div class="container">
   <h2>Gist list</h2>
+  <div id="sum"></div>
   <div id="parent_div"></div>
   <script>
     $.getJSON('https://api.github.com/users/marcgeld/gists', function(json) {
+
+      $("#parent_div").append('<div class="gistcount">'
+      + obj.length 
+      + ' public gist to date…'
+      + '<div>');
+
       json.forEach((obj) => {
         /*
         console.log('ID: ' + obj.id);
